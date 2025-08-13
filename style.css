@@ -126,7 +126,7 @@ s button:hover {
     0%,
     50% {
         opacity: 1;
-        transform: translateX(-10px) translateY(-4px);
+        transform: translateY(-4px);
     }
 
     50.01%,

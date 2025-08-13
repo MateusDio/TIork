@@ -1,11 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TIork - Site de trabalho freelancer</title>
+  <link rel="stylesheet" href="style1.css" />
 </head>
+
 <body>
-    <header>asdasdasdasddasasd</header>
+
+  <nav class="sidebar">
+    <h1>TIork</h1>
+    <br>
+    <a href="home.html" class="active">Home</a>
+    
+    <a href="#" id="logout">Deslogar</a>
+    <button id="themeToggle" class="theme-toggle">🌙 Tema Escuro</button>
+  </nav>
+
+  <main class="main-content">
+    <h1>Home</h1>
+
+    <form id="postForm" class="post-form">
+      <textarea id="postText" placeholder="Contrate algum programador!" rows="3"></textarea>
+
+      <div class="media-button-group">
+        <label for="postMedia">Selecionar Mídia</label>
+        <button type="submit">Postar</button>
+      </div>
+
+      <input type="file" id="postMedia" accept="image/*,video/*" multiple />
+
+      <div id="atividadeConcluidaContainer" style="display:none;">
+        <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
+        <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
+        <label><input type="radio" name="atividadeConcluida" value="mentais" /> Post Comum</label>
+      </div>
+    </form>
+
+    <section id="feed" class="feed"></section>
+  </main>
+
+  <div id="imageModal" class="image-modal">
+    <img src="" alt="Imagem Ampliada" />
+  </div>
+
+  <script src="script2.js"></script>
+  <script>
+    const imageModal = document.getElementById('imageModal');
+    const modalImg = imageModal.querySelector('img');
+
+    document.addEventListener('click', (e) => {
+      if (e.target.tagName === 'IMG' && e.target.closest('.post-media')) {
+        modalImg.src = e.target.src;
+        imageModal.classList.add('active');
+      }
+      if (e.target === imageModal) {
+        imageModal.classList.remove('active');
+        modalImg.src = '';
+      }
+    });
+  </script>
 </body>
-</html>
