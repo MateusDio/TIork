@@ -15,7 +15,6 @@
     <br>
     <a href="home.html" class="active">Home</a>
     <a href="atividades.html">Conversas</a>
-    <a href="atividades.html">Matching</a>
     <a href="atividades.html">Configurações</a>
     <a href="#" id="logout">Deslogar</a>
     <button id="themeToggle" class="theme-toggle">🌙 Tema Escuro</button>
@@ -28,17 +27,11 @@
       <textarea id="postText" placeholder="Contrate algum programador!" rows="3"></textarea>
 
       <div class="media-button-group">
-        <label for="postMedia">Selecionar Mídia</label>
         <button type="submit">Postar</button>
       </div>
 
-      <input type="file" id="postMedia" accept="image/*,video/*" multiple />
+    
 
-      <div id="atividadeConcluidaContainer" style="display:none;">
-        <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
-        <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
-        <label><input type="radio" name="atividadeConcluida" value="mentais" /> Post Comum</label>
-      </div>
     </form>
 
     <section id="feed" class="feed"></section>

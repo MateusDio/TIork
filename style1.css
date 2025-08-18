@@ -47,6 +47,21 @@ body.dark .checkbox-container label {
   transition: background 0.3s ease;
 }
 
+.conversar-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #1877f2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.conversar-btn:hover {
+  background: #0f5acc;
+}
+
 body.dark .theme-toggle {
   background: #444;
   color: #fff;
@@ -243,7 +258,7 @@ color: rgb(255, 255, 255);
 .media-button-group {
   display: flex;
   align-items: center;
-  gap: 1rem; /* espaçamento entre label e botão */
+  gap: 1rem; 
 }
 
 .media-button-group label[for="postMedia"],
@@ -271,7 +286,7 @@ color: rgb(255, 255, 255);
   background: #0f5acc;
 }
 
-/* Tema escuro */
+
 body.dark {
   background-color: #121212;
   color: #f0f0f0;
@@ -279,12 +294,11 @@ body.dark {
 .atividade-lista input[type="checkbox"] {
   display: none;
 }
-/* Container principal */
+
 .main-content {
   padding: 30px;
 }
 
-/* Título principal */
 .main-content h1 {
   font-size: 2rem;
   margin-bottom: 20px;
@@ -293,20 +307,20 @@ body.dark {
   gap: 10px;
 }
 
-/* Títulos de seção */
+
 .atividades-section h2 {
   margin-top: 30px;
   font-size: 1.4rem;
 }
 
-/* Lista de atividades */
+
 .atividade-lista {
   list-style: none;
   padding: 0;
   margin-top: 10px;
 }
 
-/* Item da atividade */
+
 .atividade-lista li {
   background: #f2f2f2;
   padding: 14px 20px;
@@ -351,13 +365,13 @@ body.dark {
 #resetBtn:hover {
   background-color: #e53935;
 }
-/* Hover */
+
 .atividade-lista li:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transform: translateY(-1px);
 }
 
-/* Atividade feita */
+
 .atividade-lista .status {
   font-weight: bold;
   font-size: 0.95rem;
@@ -373,13 +387,13 @@ body.dark .atividade-lista li.feito {
   color: #c7f7cd;
 }
 
-/* Checkbox */
+
 .atividade-lista input[type="checkbox"] {
   transform: scale(1.3);
   margin-left: 12px;
 }
 
-/* Emoji + texto */
+
 .atividade-lista li span {
   display: flex;
   align-items: center;
@@ -387,21 +401,20 @@ body.dark .atividade-lista li.feito {
   flex: 1;
 }
 
-/* Tema escuro para lista */
+
 body.dark .atividade-lista li {
   background-color: #1e1e1e;
   border-color: #333;
   color: #f0f0f0;
 }
 
-/* Atividade feita no escuro */
 body.dark .atividade-lista li.feito {
   background-color: #2f5134;
   color: #c7f7cd;
   border-color: #56bb78;
 }
 
-/* Botão de tema */
+
 .theme-toggle {
   margin-top: 10px;
   background-color: #ffd966;
@@ -556,7 +569,7 @@ body.dark .atividade-lista li.feito {
 }
 
 @media (max-width: 480px) {
-  /* Sidebar reduzida */
+
   .sidebar {
     width: 60px;
     padding: 1rem 0.5rem;
@@ -602,7 +615,7 @@ body.dark .atividade-lista li.feito {
 
 }
 
-/* MOBILE: telas até 480px */
+
 @media (max-width: 480px) {
   .sidebar {
     width: 60px;
@@ -611,7 +624,7 @@ body.dark .atividade-lista li.feito {
     transition: width 0.3s ease;
   }
 
-  /* Sidebar expande ao hover (desktop) ou quando ativa (mobile com JS) */
+
   .sidebar:hover,
   .sidebar.expanded {
     width: 200px;
@@ -625,10 +638,10 @@ body.dark .atividade-lista li.feito {
     white-space: nowrap;
     opacity: 0;
     transition: opacity 0.3s ease;
-    pointer-events: none; /* evita clique quando escondido */
+    pointer-events: none;
   }
 
-  /* Mostrar título quando sidebar expandida */
+ 
   .sidebar:hover h1,
   .sidebar.expanded h1,
   .sidebar:hover .logo,
@@ -661,7 +674,7 @@ body.dark .atividade-lista li.feito {
     user-select: none;
   }
 
-  /* Texto oculto */
+ 
   .sidebar a span {
     position: absolute;
     left: 70px;
@@ -671,14 +684,14 @@ body.dark .atividade-lista li.feito {
     pointer-events: none;
   }
 
-  /* Mostrar texto ao hover na sidebar pequena */
+
   .sidebar:hover a span,
   .sidebar.expanded a span {
     opacity: 1;
     pointer-events: auto;
   }
 
-  /* Ao expandir sidebar, aumentar fonte e padding */
+
   .sidebar:hover a,
   .sidebar.expanded a {
     font-size: 1rem;
@@ -688,7 +701,7 @@ body.dark .atividade-lista li.feito {
     justify-content: flex-start;
   }
 
-  /* Hover e active para links */
+  
   .sidebar a:hover,
   .sidebar a.active {
     background: #0f5acc;
@@ -696,7 +709,7 @@ body.dark .atividade-lista li.feito {
     box-shadow: 0 5px 15px rgb(15 90 204 / 0.5);
   }
 
-  /* Ajuste do conteúdo principal */
+
   .main-content {
     margin-left: 60px;
     padding: 1rem;
@@ -711,7 +724,7 @@ body.dark .atividade-lista li.feito {
   }
 }
 
-/* TABLET: telas entre 481px e 800px */
+
 @media (min-width: 481px) and (max-width: 800px) {
   .sidebar {
     width: 100px;
