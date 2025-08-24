@@ -29,15 +29,17 @@
     </div>
 
     <div class="content">
-      
-      <div class="conversas-container">
-        <h2>Conversas com Empresas</h2>
 
-        <div class="conversa" id="abrirChatTechlog">
+      <div class="conversas-container">
+        <h2>Conversas</h2>
+
+        <div class="conversa">
+
           <div class="info">
             <p class="nome">TechLog</p>
             <p class="ultima-msg">Seu pedido foi enviado 🚚</p>
           </div>
+          <span class="hora">09:42</span>
         </div>
 
         <div class="conversa">
@@ -45,73 +47,86 @@
             <p class="nome">HighTech</p>
             <p class="ultima-msg">Obrigado pelo contato!</p>
           </div>
+          <span class="hora">Ontem</span>
         </div>
 
         <div class="conversa">
           <div class="info">
             <p class="nome">Food&Food</p>
-            <p class="ultima-msg">Promoção: 2x1 no combo </p>
+            <p class="ultima-msg">Promoção: 2x1 no combo</p>
           </div>
+          <span class="hora">Seg</span>
         </div>
       </div>
 
-     
-      <div class="chat-container" id="chatTechlog" style="display:none;">
+      <div class="chat-messages">
         <div class="chat-header">
-          <button id="voltarBtn">⬅</button>
-          <h3>TechLog</h3>
+          <div class="chat-info">
+            <h3>TechLog</h3>
+            <span class="status">online agora</span>
+          </div>
+          <div class="chat-actions">
+            <button>📞</button>
+            <button>📎</button>
+            <button>⋮</button>
+          </div>
+        </div>
+        <div class="msg received">Olá, tudo bem? Vi seu perfil e gostaria que fizesse um site para nós.</div>
+
+
+        <div class="msg sent">Olá! Claro, posso ajudar sim. Qual seria o prazo esperado?</div>
+
+
+        <div class="msg received">Precisamos em até 3 dias úteis.</div>
+
+
+        <div class="msg sent">Perfeito, valor do projeto: R$ 1.500,00.</div>
+
+
+        <div class="msg received card pagamento">
+          💳 Pagamento confirmado - R$ 1.500,00
         </div>
 
-     <div class="chat-messages">
- 
-  <div class="msg received">Olá, tudo bem? Vi seu perfil e gostaria que fizesse um site para nós.</div>
+
+        <div class="msg received checklist">
+          ✅ Checklist de tarefas:<br>
+          - Estrutura inicial<br>
+          - Layout responsivo<br>
+          - Integração com API<br>
+          - Testes finais
+        </div>
 
 
-  <div class="msg sent">Olá! Claro, posso ajudar sim. Qual seria o prazo esperado?</div>
+        <div class="msg arquivo received">
+          <div class="file-info">
+            <span class="icon">📂</span>
+            <span class="filename">briefing-site.pdf</span>
+          </div>
+          <button>Download</button>
+        </div>
+
+        <div class="msg arquivo received">
+          <div class="file-info">
+            <span class="icon">📂</span>
+            <span class="filename">imagens-produto.zip</span>
+          </div>
+          <button>Download</button>
+        </div>
+
+        <div class="msg arquivo sent">
+          <div class="file-info">
+            <span class="icon">🚀</span>
+            <span class="filename">Entrega final: site.zip</span>
+          </div>
+          <button>Download</button>
+        </div>
 
 
-  <div class="msg received">Precisamos em até 3 dias úteis.</div>
+        <div class="msg received">Perfeito, recebemos tudo. Muito obrigado!</div>
 
-
-  <div class="msg sent">Perfeito, valor do projeto: R$ 1.500,00.</div>
-
-
-  <div class="msg received card pagamento">
-    💳 Pagamento confirmado - R$ 1.500,00
-  </div>
-
- 
-  <div class="msg sent checklist">
-    ✅ Checklist de tarefas:<br>
-    - Estrutura inicial<br>
-    - Layout responsivo<br>
-    - Integração com API<br>
-    - Testes finais
-  </div>
-
- 
-  <div class="msg received arquivo">
-    📂 briefing-site.pdf <button>Download</button>
-  </div>
-  <div class="msg received arquivo">
-    📂 imagens-produto.zip <button>Download</button>
-  </div>
-
-  
-  <div class="msg sent arquivo">
-    🚀 Entrega final: site.zip <button>Download</button>
-  </div>
-
-
-  <div class="msg received">Perfeito, recebemos tudo. Muito obrigado!</div>
-
-    <div class="msg received card pagamento">
-    💳 Pagamento Enviado  ✅ 
-  </div>
-</div>
-
-
-
+        <div class="msg received card pagamento">
+          💳 Pagamento liberado ✅
+        </div>
 
         <div class="chat-input">
           <input type="text" placeholder="Escreva uma mensagem..." disabled>
@@ -119,6 +134,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </body>
 
