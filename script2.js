@@ -1,21 +1,32 @@
 const logoutBtn = document.getElementById('logout');
-const toggleBtn = document.getElementById("themeToggle");
+const themeToggleBtn = document.getElementById("themeToggle"); 
+const sidebarToggleBtn = document.getElementById("toggleBtn"); 
+const sidebar = document.getElementById("sidebar");
 const body = document.body;
-const themeStorage = localStorage.getItem("tema");
 
-if (themeStorage === "dark") {
+const savedTheme = localStorage.getItem("tema");
+if (savedTheme === "dark") {
   body.classList.add("dark");
-  if (toggleBtn) toggleBtn.textContent = "☀️ Tema Claro";
+  if (themeToggleBtn) themeToggleBtn.textContent = "☀️ Tema Claro";
 }
 
-if (toggleBtn) {
-  toggleBtn.addEventListener("click", () => {
+
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener("click", () => {
     body.classList.toggle("dark");
     const darkMode = body.classList.contains("dark");
-    toggleBtn.textContent = darkMode ? "☀️ Tema Claro" : "🌙 Tema Escuro";
+    themeToggleBtn.textContent = darkMode ? "☀️ Tema Claro" : "🌙 Tema Escuro";
     localStorage.setItem("tema", darkMode ? "dark" : "light");
   });
 }
+
+
+if (sidebarToggleBtn && sidebar) {
+  sidebarToggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+  });
+}
+
 
 if (logoutBtn) {
   logoutBtn.addEventListener('click', (e) => {
@@ -37,9 +48,8 @@ function salvarPosts(posts) {
 
 function carregarPosts() {
   const dados = localStorage.getItem('postsSalvos');
-  return dados ? JSON.parse(dados) : null;
+  return dados ? JSON.parse(dados) : [];
 }
-
 
 function criarPost(postData, prepend = false) {
   const feed = document.getElementById('feed');
@@ -73,7 +83,7 @@ function criarPost(postData, prepend = false) {
   conversarBtn.textContent = "💬 Entrar em contato";
   conversarBtn.classList.add('conversar-btn');
   conversarBtn.type = "button";
- 
+
   conversarBtn.addEventListener('click', () => {
     conversarBtn.classList.add('pulse');
     setTimeout(() => conversarBtn.classList.remove('pulse'), 600);
@@ -121,7 +131,6 @@ const seedPosts = [
   }
 ];
 
-
 salvarPosts(seedPosts);
 seedPosts.forEach(post => criarPost(post));
 
@@ -147,7 +156,7 @@ if (postForm) {
 
     criarPost(novoPost, true);
 
-    const postsAtualizados = carregarPosts() || [];
+    const postsAtualizados = carregarPosts();
     postsAtualizados.unshift(novoPost);
     salvarPosts(postsAtualizados);
 

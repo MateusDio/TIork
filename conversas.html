@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style4.css">
+  <script src="script3.js" defer></script>
+  <title>Conversas</title>
+</head>
+
+<body>
+  <div class="layout">
+    <div class="sidebar" id="sidebar">
+      <div class="cima">
+        <h1>Tlork</h1>
+        <button id="toggleBtn">☰</button>
+      </div>
+      <ul>
+        <li><a href="principal.html">Home</a></li>
+        <li><a href="#">Conversas</a></li>
+        <li><a href="#">Configurações</a></li>
+        <li><a href="#" id="logout">Deslogar</a></li>
+      </ul>
+
+      <div class="theme-container">
+        <button id="themeToggle" class="theme-toggle">🌙 Tema Escuro</button>
+      </div>
+    </div>
+
+    <div class="content">
+      
+      <div class="conversas-container">
+        <h2>Conversas com Empresas</h2>
+
+        <div class="conversa" id="abrirChatTechlog">
+          <div class="info">
+            <p class="nome">TechLog</p>
+            <p class="ultima-msg">Seu pedido foi enviado 🚚</p>
+          </div>
+        </div>
+
+        <div class="conversa">
+          <div class="info">
+            <p class="nome">HighTech</p>
+            <p class="ultima-msg">Obrigado pelo contato!</p>
+          </div>
+        </div>
+
+        <div class="conversa">
+          <div class="info">
+            <p class="nome">Food&Food</p>
+            <p class="ultima-msg">Promoção: 2x1 no combo </p>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="chat-container" id="chatTechlog" style="display:none;">
+        <div class="chat-header">
+          <button id="voltarBtn">⬅</button>
+          <h3>TechLog</h3>
+        </div>
+
+     <div class="chat-messages">
+ 
+  <div class="msg received">Olá, tudo bem? Vi seu perfil e gostaria que fizesse um site para nós.</div>
+
+
+  <div class="msg sent">Olá! Claro, posso ajudar sim. Qual seria o prazo esperado?</div>
+
+
+  <div class="msg received">Precisamos em até 3 dias úteis.</div>
+
+
+  <div class="msg sent">Perfeito, valor do projeto: R$ 1.500,00.</div>
+
+
+  <div class="msg received card pagamento">
+    💳 Pagamento confirmado - R$ 1.500,00
+  </div>
+
+ 
+  <div class="msg sent checklist">
+    ✅ Checklist de tarefas:<br>
+    - Estrutura inicial<br>
+    - Layout responsivo<br>
+    - Integração com API<br>
+    - Testes finais
+  </div>
+
+ 
+  <div class="msg received arquivo">
+    📂 briefing-site.pdf <button>Download</button>
+  </div>
+  <div class="msg received arquivo">
+    📂 imagens-produto.zip <button>Download</button>
+  </div>
+
+  
+  <div class="msg sent arquivo">
+    🚀 Entrega final: site.zip <button>Download</button>
+  </div>
+
+
+  <div class="msg received">Perfeito, recebemos tudo. Muito obrigado!</div>
+
+    <div class="msg received card pagamento">
+    💳 Pagamento Enviado  ✅ 
+  </div>
+</div>
+
+
+
+
+        <div class="chat-input">
+          <input type="text" placeholder="Escreva uma mensagem..." disabled>
+          <button disabled>Enviar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

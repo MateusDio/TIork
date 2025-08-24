@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'inter', sans-serif;
 }
 
 html,
@@ -13,31 +18,42 @@ body {
     color: #F3F3F3;
 }
 
-
-
 .anm {
     animation: aparecendo 1s ease;
 }
 
 header {
-    height: 70px;
+    height: 70px; 
     width: 100%;
-    background-color: rgb(125, 5, 181);
+    background-color: #7d05b5;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 40px; 
     position: fixed;
     top: 0;
     z-index: 999;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+     border-bottom: 1px solid #333;
+
 }
 
 #atc {
-    font-size: 40px;
-    font-weight: bold;
-    color: #f3f3f3;
+    font-size: 0; 
 }
+
+#logo {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-left: -18px; 
+}
+
+
+#atc {
+    font-size: 0; 
+}
+
 
 #Cabeça .nav-container {
     display: flex;
@@ -71,66 +87,169 @@ header {
     color: #ffffff;
 }
 
-.primeiro {
+.inicio {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-
 }
 
 .dentro {
-    background-color: rgb(125, 5, 181);
+    background-color: #7d05b5;
     padding: 40px;
-    width: 900px;
-    height: 400px;
+    width: 1300px;
+    height: 630px;
     border-radius: 50px;
-
-
+    background-image: url('img/o-que-fazem-empresas-de-tecnologia_.jpg');
+    background-size: 1500px;
+    background-position: center;
+    background-repeat: no-repeat;
 
 }
 
-h2 {
+h1 {
+    font-size: 40px;
+    margin-top: 10px;
+}
+
+
+
+#introd {
+    margin-top: -9px;
     font-size: 30px;
+    text-shadow: 4px 4px 20px black;
+        font-family: 'Google Sans Code', sans-serif;
+}
+
+
+#fundo{
+    background-color: #7d05b56b;
+    width: 600px;
+    height: 250px;
+    border-radius: 10px;
+    padding: 30px;
 
 
 }
 
-#nome {
-    font-size: 50px;
-     text-shadow: 4px 4px 20px black;
+.menu{
+    position: relative;
+}
+
+.dropdown{
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    background: white;
+    color: black;
+    padding: 15px;
+    min-width: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: none;
+    animation: fadeIN 0.3s ease; 
 
 }
 
-#nome::after {
-    content: "";
-    animation: digitando 3s linear alternate infinite;
+.dropdown.right {
+    left: auto;   
+    right: 0;    
+}
 
+.menu:hover .dropdown {
+    display: block;
+}
+
+.dropdown h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #7d05b5;
+}
+
+.dropdown p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#porque{
+    color: black;
+    text-align: center
+    
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.card {
+    background-color: #ffffff;
+    width: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.card h4 {
+    color: #7d05b5;
+    margin-bottom: 10px;
+    font-family: 'Google Sans Code', sans-serif;
+    font-size: 20px;
+}
+
+.card p {
+    color: #000000e7;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+#texto{
+    color: #7d05b5;
+}
+
+#texto2{
+    color: black;
+    font-size: 20px;
+}
+
+#texto3{
 
 }
 
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #ffffff;
 
-@keyframes digitando {
-    0% {
-        content: "T";
-    }
-
-    25% {
-        content: "TI";
-    }
-
-    50% {
-        content: "TIo";
-    }
-
-    75% {
-        content: "TIor";
-    }
-
-    100% {
-        content: "TIork";
-    }
-
-
-
+    border-top: 1px solid #333;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    background-color: #7d05b5
 }
